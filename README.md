@@ -1,5 +1,6 @@
-# GrocerySales (2023-11-28)
-DataCamp SQL Certification - Practical Exam: Grocery Store Sales
+# GrocerySales 
+DataCamp SQL Certification - Practical Exam: Grocery Store Sales (2023-11-28)
+
 ![image](https://github.com/user-attachments/assets/f30cc661-943a-44de-b70b-c0a01adf7eb0)
 
 FoodYum is a grocery store chain that is based in the United States.
@@ -48,4 +49,30 @@ SELECT product_id,
 FROM products;
 ```
 ![image](https://github.com/user-attachments/assets/9c043a14-9a9f-4036-b31a-6a619bffcf1c)
+
+## Task 3
+To find out how the range varies for each product type, your manager has asked you to determine the minimum and maximum values for each product type.
+- Write a query to return the product_type, min_price and max_price columns.
+```SQL
+SELECT product_type,
+		MIN(price) AS min_price,
+		MAX(price) AS max_price
+FROM products
+GROUP BY product_type;
+```
+![image](https://github.com/user-attachments/assets/0d0cc97b-cff2-4d14-9318-30f4443fd7df)
+
+## Task 4
+The team want to look in more detail at meat and dairy products where the average units sold was greater than ten.
+- Write a query to return the product_id, price and average_units_sold of the rows of interest to the team.
+```SQL
+SELECT product_id,
+		price,
+		average_units_sold
+FROM products 
+WHERE product_type IN('Meat', 'Dairy')
+	AND average_units_sold >10;
+```
+![image](https://github.com/user-attachments/assets/9294c248-d86c-455b-abac-b5571186bd8b)
+
 
