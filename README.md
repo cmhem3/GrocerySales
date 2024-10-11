@@ -75,4 +75,5 @@ WHERE product_type IN('Meat', 'Dairy')
 ```
 ![image](https://github.com/user-attachments/assets/9294c248-d86c-455b-abac-b5571186bd8b)
 
-
+**REFERENCES**
+1) DataCamp Certification Page: https://app.datacamp.com/certification/get-started/associate-data-analyst/overview
